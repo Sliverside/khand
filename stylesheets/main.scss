@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Khand:300,400,500,600,700&subset=devanagari,latin-ext');
+
+$dark: #000;
+
+body {
+  font-family: 'khand';
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight: 400; }
+
+h1 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  margin: 10px;
+  &:before {
+    background-color: $dark;
+    z-index: -1;
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0.5em;
+    left: -100px;
+    right: -10px;
+    height: 0.4em;
+  }
+}
+
+body > section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.def {
+  font-size: 14px;
+  line-height: 1em;
+  text-decoration: none;
+  color: $dark;
+}
+
+.accueil {
+  background-color: #555;
+  $color: #00ff48;
+  .color {
+    position: relative;
+    color: $color;
+  }
+  h1 {
+    &:before {
+      background-color: $color;
+    }
+  }
+  article {
+    p {
+      font-size: 200px;
+      line-height: 1em;
+      text-align: center;
+      margin: 0;
+    }
+  }
+  .def {
+    position: absolute;
+    left: 0;
+    bottom: 70px;
+  }
+}
+
+
+.pourquoi {
+  background-color: #673a3a;
+  $color: #00fbff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .color {
+    position: relative;
+    color: $color;
+  }
+  h1 {
+    &:before {
+      background-color: $color;
+    }
+  }
+  article {
+    p {
+      font-size: 200px;
+      line-height: 1em;
+      text-align: center;
+      margin: 0;
+    }
+  }
+  .def {
+    position: absolute;
+    left: 0;
+    bottom: 70px;
+  }
+}
