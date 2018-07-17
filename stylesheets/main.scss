@@ -11,20 +11,22 @@ h1, h2, h3, h4, h5, h6 { font-weight: 400; }
 
 h1 {
   position: fixed;
-  left: 0;
+  right: 0;
   top: 0;
   z-index: 0;
-  margin: 10px;
+  margin: 20px 100vw 0 0;
+  padding-left: 10px;
+  transition: 200ms;
   &:before {
     background-color: $dark;
     z-index: -1;
     display: block;
     content: '';
     position: absolute;
-    top: 0.5em;
+    top: 0.6em;
     left: -100px;
     right: -10px;
-    height: 0.4em;
+    height: 0.3em;
   }
 }
 
@@ -33,6 +35,11 @@ body > section {
   display: flex;
   justify-content: center;
   align-items: center;
+  &.active {
+    h1 {
+      transform: translateX(calc(100% + 25px));
+    }
+  }
 }
 
 .def {
@@ -43,7 +50,6 @@ body > section {
 }
 
 .accueil {
-  background-color: #555;
   $color: #00ff48;
   .color {
     position: relative;
@@ -71,7 +77,6 @@ body > section {
 
 
 .pourquoi {
-  background-color: #673a3a;
   $color: #00fbff;
   display: flex;
   justify-content: center;
